@@ -44,6 +44,11 @@ public class Typewriter : MonoBehaviour {
 			GetComponent<Text> ().text += textToType;
 			textToType = "";
 		}
+
+		// At random, signal our text's material to "jitter" the text.
+		GetComponent<Text> ().materialForRendering.SetFloat ("_JitterX", Random.Range (0.0f, 1.0f));
+		GetComponent<Text> ().materialForRendering.SetFloat ("_JitterY", Random.Range (0.0f, 1.0f));
+
 	}
 
 	void OnEnable() {

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	public float playerSpeed = 0.05f;
-
+	public UnityEvent timerCallbacks = new UnityEvent();
 	// Use this for initialization
 	void Start () {
 	
