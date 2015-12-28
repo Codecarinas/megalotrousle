@@ -5,6 +5,8 @@ using System.Collections;
 public class PlayerBattleController : MonoBehaviour {
 
 	public GameObject target;
+	public AudioClip damageSound;
+	public AudioClip healSound;
 	public float health;
 	public float maxHealth;
 	public int attack = 1;
@@ -39,6 +41,8 @@ public class PlayerBattleController : MonoBehaviour {
 			rotation *= Quaternion.Euler (new Vector3 (0, 0, 180));
 
 			transform.rotation = rotation;
+		} else {
+			ApplyMove (Vector2.zero);
 		}
 
 		healthBar.value = health;
@@ -65,6 +69,11 @@ public class PlayerBattleController : MonoBehaviour {
 	}
 
 	public void ApplyDamage(float damage) {
-		health += Mathf.RoundToInt(Mathf.Clamp(damage / defense, 1, int.MaxValue));
+		if (damage < 0) {
+			GetComponent<AudioSource> ().PlayOneShot (damageSound);
+		} else {
+			GetComponent<AudioSource> ().PlayOneShot (healSound);
+		}
+		health += Mathf.RoundToInt(damage / defense);
 	}
 }

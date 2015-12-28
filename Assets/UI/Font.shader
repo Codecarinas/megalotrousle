@@ -4,6 +4,7 @@ Shader "GUI/Undertale Text Shader" {
 		_Color ("Text Color", Color) = (1,1,1,1)
 		_JitterX ("Jitter X", Range(0, 1)) = 0
 		_JitterY ("Jitter Y", Range(0, 1)) = 0
+		_JitterThreshold ("Jitter Threshold", Range(0, 1)) = 0.001
 	}
 
 	SubShader {
@@ -42,6 +43,7 @@ Shader "GUI/Undertale Text Shader" {
 			uniform fixed4 _Color;
 			uniform float _JitterX;
 			uniform float _JitterY;
+			uniform float _JitterThreshold;
 
 			v2f vert (appdata_t v)
 			{
@@ -49,11 +51,9 @@ Shader "GUI/Undertale Text Shader" {
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.screenPos = ComputeScreenPos(o.vertex);
 				o.screenPos.xy = o.screenPos.xy / o.screenPos.w;
-				if (_JitterX > o.screenPos.x - 0.001 && _JitterX < o.screenPos.x + 0.001) {
+				if (_JitterX > o.screenPos.x - _JitterThreshold && _JitterX < o.screenPos.x + _JitterThreshold) {
 					o.vertex.x += (_JitterX * 2 - 1) / 16;
-					//if (_JitterY > o.screenPos.y - 0.075 && _JitterY < o.screenPos.y + 0.075) {
-						o.vertex.y += (_JitterY * 2 - 1) / 16;
-					//}
+					o.vertex.y += (_JitterY * 2 - 1) / 16;
 				}
 
 				o.color = v.color * _Color;
