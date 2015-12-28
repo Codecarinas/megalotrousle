@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameStateController : MonoBehaviour {
 
@@ -26,6 +27,7 @@ public class GameStateController : MonoBehaviour {
 
 	public enum BattleState {
 		kPlayerTurn = 0,
+		kEnemyTurnIntro,
 		kEnemyTurn,
 		kCutscene,
 		kMenu
@@ -36,8 +38,12 @@ public class GameStateController : MonoBehaviour {
 	[SerializeField] private Text _playerTimeRemaining;
 	public float timeRemaining;
 
-	[SerializeField] private UnityEvent _playerTurnCallbacks = new UnityEvent();
-	[SerializeField] private UnityEvent _menuTurnCallbacks = new UnityEvent();
+	public UnityEvent playerTurnCallbacks = new UnityEvent();
+	public UnityEvent menuTurnCallbacks = new UnityEvent();
+	public UnityEvent enemyTurnCallbacks = new UnityEvent();
+	public UnityEvent enemyTurnIntroCallbacks = new UnityEvent();
+
+	public List<Enemy> enemies;
 
 	public GameState gameState {
 		get {
@@ -69,16 +75,57 @@ public class GameStateController : MonoBehaviour {
 
 		if (timeRemaining < 0 && _currentBattleState != BattleState.kMenu) {
 			timeRemaining = 0;
-			_currentBattleState = BattleState.kMenu;
-			_menuTurnCallbacks.Invoke ();
-		} else if (_currentBattleState == BattleState.kPlayerTurn) {
+			if (_currentBattleState == BattleState.kPlayerTurn) {
+				NextBattleState (BattleState.kEnemyTurnIntro);
+			} else if (_currentBattleState == BattleState.kEnemyTurn) {
+				NextBattleState (BattleState.kMenu);
+			}
+
+		} else if (_currentBattleState == BattleState.kPlayerTurn || _currentBattleState == BattleState.kEnemyTurn) {
 			timeRemaining -= Time.deltaTime;
 		}
 	}
 
-	public void PlayerFight(int enemyIdx) {
-		_currentBattleState = BattleState.kPlayerTurn;
-		_playerTurnCallbacks.Invoke ();
+	public void NextBattleState(BattleState state) {
+		switch (state) {
+		case BattleState.kMenu:
+			menuTurnCallbacks.Invoke ();
+			NotificationCenter.defaultInstance.PostNotification ("GameState.PlayerMenu");
+			break;
+		case BattleState.kEnemyTurnIntro:
+			enemyTurnIntroCallbacks.Invoke ();
+			NotificationCenter.defaultInstance.PostNotification ("GameState.EnemyAttack.Intro");
+			break;
+		case BattleState.kEnemyTurn:
+			enemyTurnCallbacks.Invoke ();
+			NotificationCenter.defaultInstance.PostNotification ("GameState.EnemyAttack");
+			break;
+		case BattleState.kPlayerTurn:
+			playerTurnCallbacks.Invoke ();
+			NotificationCenter.defaultInstance.PostNotification ("GameState.PlayerAttack");
+			break;
+		default:
+			break;
+		}
+
+		_currentBattleState = state;
+	}
+
+	public void PlayerFight(int idx) {
+		NextBattleState (BattleState.kPlayerTurn);
 		timeRemaining = 30;
+	}
+
+	public void EnemyFight(float time) {
+		NextBattleState (BattleState.kEnemyTurn);
+		timeRemaining = time;
+	}
+
+	public void EnemyIntro() {
+		NextBattleState (BattleState.kEnemyTurnIntro);
+	}
+
+	public void PlayerAct() {
+		EnemyIntro ();
 	}
 }

@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 
-public class BattleDialogBoxController : MonoBehaviour {
+public class BattleDialogBoxController : ViewController {
 	public GameObject attackSelection;
 	public GameObject dialog;
 	public GameObject actSelection;
@@ -15,7 +15,8 @@ public class BattleDialogBoxController : MonoBehaviour {
 	Vector2 _originalSize;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start ();
 		_imageComponent = GetComponent<Image> ();
 
 		_originalSize = outline.rectTransform.sizeDelta;

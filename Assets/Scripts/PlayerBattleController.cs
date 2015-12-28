@@ -1,42 +1,52 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerBattleController : MonoBehaviour {
 
 	public GameObject target;
+	public float health;
+	public float maxHealth;
+	public int attack = 1;
+	public int defense = 1;
+	public Slider healthBar;
+	public Text healthText;
 	[SerializeField] private float _speed = 2;
 	[SerializeField] private Transform _startTransform;
 	[SerializeField] private GameObject[] _buttons;
 
 	// Use this for initialization
 	void Start () {
-	
+		healthBar.maxValue = maxHealth;
 	}
-
-	int _buttonIndex = 0;
 
 	// Update is called once per frame
 	void Update () {
-		if (GameStateController.Instance.battleState == GameStateController.BattleState.kPlayerTurn) {
-			Vector3 tempPos = transform.localPosition;
-			tempPos.x += Input.GetAxis ("Horizontal") * Time.deltaTime * _speed;
-			tempPos.y += Input.GetAxis ("Vertical") * Time.deltaTime * _speed;
+		if (GameStateController.Instance.battleState == GameStateController.BattleState.kPlayerTurn || GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurn) {
+			Vector3 movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+			ApplyMove (movement * _speed);
 
-			transform.localPosition = tempPos;
-			Vector3 targetVec = target.transform.position - transform.position;
-			targetVec.Normalize ();
-			Quaternion rotation = Quaternion.LookRotation (targetVec);
+			Vector3 lookatPoint = target.transform.position;
+
+			lookatPoint.y = -lookatPoint.y;
+
+			transform.LookAt (lookatPoint);
+
+			Quaternion rotation = transform.rotation;
 			rotation.x = 0;
 			rotation.y = 0;
 
-			if (targetVec.x <= 0) {
-				rotation *= Quaternion.Euler (new Vector3 (0, 0, 180));
-			}
+			rotation *= Quaternion.Euler (new Vector3 (0, 0, 180));
 
-			rotation *= Quaternion.Euler (new Vector3 (0, 0, 90));
-
-			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * 4);
+			transform.rotation = rotation;
 		}
+
+		healthBar.value = health;
+		healthText.text = health.ToString () + "/" + maxHealth.ToString ();
+	}
+
+	void ApplyMove(Vector2 direction) {
+		GetComponent<Rigidbody2D> ().velocity = direction;
 	}
 
 	public void MoveToStart() {
@@ -47,5 +57,14 @@ public class PlayerBattleController : MonoBehaviour {
 	public void MoveToPosition(Vector3 position) {
 		transform.position = position;
 		transform.rotation = Quaternion.identity;
+	}
+
+	public void MoveToFirstButton() {
+		transform.position = _buttons [0].transform.position;
+		transform.rotation = Quaternion.identity;
+	}
+
+	public void ApplyDamage(float damage) {
+		health += Mathf.RoundToInt(Mathf.Clamp(damage / defense, 1, int.MaxValue));
 	}
 }

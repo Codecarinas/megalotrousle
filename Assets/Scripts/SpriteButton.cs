@@ -16,9 +16,10 @@ public class SpriteButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		if (Input.GetKeyDown (KeyCode.Z) && _playerSelected) {
 			selectCallbacks.Invoke ();
-		}
+		}*/
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {

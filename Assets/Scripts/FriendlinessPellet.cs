@@ -21,12 +21,24 @@ public class FriendlinessPellet : MonoBehaviour {
 			EnemySoul s = other.GetComponent<EnemySoul> ();
 			s.ApplyDamage (damage);
 		}
+
+		if (other.GetComponent<PlayerBattleController> () != null) {
+			PlayerBattleController pc = other.GetComponent<PlayerBattleController> ();
+			pc.ApplyDamage (damage);
+			Debug.Log ("Found player!");
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.GetComponent<EnemySoul> () != null && applyKarmaRedemption) {
 			EnemySoul s = other.GetComponent<EnemySoul> ();
 			s.ApplyDamage (damage);
+		}
+
+
+		if (other.GetComponent<PlayerBattleController> () != null && applyKarmaRedemption) {
+			PlayerBattleController pc = other.GetComponent<PlayerBattleController> ();
+			pc.ApplyDamage (damage);
 		}
 	}
 }

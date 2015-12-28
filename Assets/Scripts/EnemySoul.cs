@@ -11,7 +11,7 @@ public class EnemySoul : MonoBehaviour {
 	public AudioClip deathSound;
 	public AudioClip damageSound;
 
-	private float timeTillRemove;
+	public float timeTillRemove;
 	private Vector3 _damageTextOrigin;
 
 	// Use this for initialization
@@ -35,12 +35,6 @@ public class EnemySoul : MonoBehaviour {
 			tempOrigin.x += Mathf.Sin (timeTillRemove * 64) * 4;
 			damageText.transform.localPosition = tempOrigin;
 		}
-
-		Vector3 pos = transform.localPosition;
-		pos.x = Random.Range (-1.7f, 1.7f);
-		pos.y = Random.Range (-1.7f, 1.7f);
-
-		transform.localPosition = Vector3.MoveTowards (transform.localPosition, pos, Time.deltaTime * 16);
 	}
 
 	public void ApplyDamage(float damage) {
