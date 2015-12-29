@@ -18,13 +18,11 @@ public class FollowTarget : MonoBehaviour {
 		lookatPoint = Vector3.Lerp (_previousPoint, lookatPoint, Time.deltaTime * followSpeed);
 		//lookatPoint.y = -lookatPoint.y;
 
-		transform.LookAt (lookatPoint);
+		transform.LookAt (lookatPoint, transform.forward);
 
 		Quaternion rotation = transform.rotation;
 		rotation.x = 0;
 		rotation.y = 0;
-
-		rotation *= Quaternion.Euler (new Vector3 (0, 0, 180));
 
 		transform.rotation = rotation;
 		_previousPoint = lookatPoint;

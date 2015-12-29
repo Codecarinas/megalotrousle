@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -27,9 +28,10 @@ public class Enemy : MonoBehaviour {
 	public EnemyDialogController dialogPrototype;
 
 	[System.Serializable]
-	public struct Response {
+	public class Response {
 		public string responseText;
 		public EnemyDialogController.CapsOptions capsOptions;
+		public UnityEvent callbacks = new UnityEvent();
 	}
 
 	[System.Serializable]
@@ -40,6 +42,12 @@ public class Enemy : MonoBehaviour {
 		public bool randomizeResponses;
 
 		private int _responseIndex = 0;
+
+		public int currentResponseIndex {
+			get {
+				return _responseIndex;
+			}
+		}
 
 		public Response NextResponse() {
 			if (randomizeResponses) {
@@ -63,7 +71,7 @@ public class Enemy : MonoBehaviour {
 		soul.health = health;
 	}
 
-	int _responseIndex = 0;
+	protected int _responseIndex = 0;
 	public virtual void CycleDefenseDialog() {
 		Response res = new Response { responseText = "...", capsOptions = EnemyDialogController.CapsOptions.kNone };
 		if (useMainResponsesDefense) {
@@ -78,6 +86,8 @@ public class Enemy : MonoBehaviour {
 		}
 
 		dialogPrototype.UpdateText (res.responseText, res.capsOptions, voice);
+
+		res.callbacks.Invoke ();
 	}
 
 	public virtual void CycleDefenseDialog(int actIndex) {
@@ -104,7 +114,7 @@ public class Enemy : MonoBehaviour {
 		dialogPrototype.gameObject.SetActive (false);
 	}
 
-	int _attackIndex;
+	protected int _attackIndex;
 	public virtual void CycleAttack() {
 		RemoveDialog ();
 		if (randomizeAttacks) {

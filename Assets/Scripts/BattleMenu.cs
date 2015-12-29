@@ -21,6 +21,10 @@ public class BattleMenu : MonoBehaviour {
 		if (GameStateController.Instance.battleState == GameStateController.BattleState.kPlayerTurn) {
 			attackOptions.SetActive (true);
 			menuOptions.SetActive (false);
+		} else if (GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurn ||
+		           GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurnIntro) {
+			attackOptions.SetActive (false);
+			menuOptions.SetActive (false);
 		} else {
 			attackOptions.SetActive (false);
 			menuOptions.SetActive (true);

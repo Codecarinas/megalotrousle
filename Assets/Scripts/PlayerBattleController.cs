@@ -20,27 +20,32 @@ public class PlayerBattleController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		healthBar.maxValue = maxHealth;
+		MoveToFirstButton ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (GameStateController.Instance.battleState == GameStateController.BattleState.kPlayerTurn || GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurn) {
-			Vector3 movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+		if (GameStateController.Instance.battleState == GameStateController.BattleState.kPlayerTurn) {
+			Vector3 movement = new Vector3 (Mathf.Clamp(Input.GetAxis ("Horizontal") * 2, -1, 1), Mathf.Clamp(Input.GetAxis ("Vertical") * 2, -1, 1), 0);
 			ApplyMove (movement * _speed);
 
-			Vector3 lookatPoint = target.transform.position;
+			Vector3 lookatPoint = target.transform.TransformPoint (target.transform.position);
 
 			lookatPoint.y = -lookatPoint.y;
 
-			transform.LookAt (lookatPoint);
+			transform.LookAt (target.transform, transform.forward);
 
 			Quaternion rotation = transform.rotation;
 			rotation.x = 0;
 			rotation.y = 0;
 
-			rotation *= Quaternion.Euler (new Vector3 (0, 0, 180));
 
 			transform.rotation = rotation;
+		} else if (GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurn) {
+			Vector3 movement = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+			ApplyMove (movement * _speed);
+
+			transform.rotation = Quaternion.identity;
 		} else {
 			ApplyMove (Vector2.zero);
 		}
@@ -64,8 +69,10 @@ public class PlayerBattleController : MonoBehaviour {
 	}
 
 	public void MoveToFirstButton() {
-		transform.position = _buttons [0].transform.position;
-		transform.rotation = Quaternion.identity;
+		if (_buttons [0].activeInHierarchy) {
+			transform.position = _buttons [0].transform.position;
+			transform.rotation = Quaternion.identity;
+		}
 	}
 
 	public void ApplyDamage(float damage) {

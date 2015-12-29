@@ -12,7 +12,7 @@ public class BackgroundAudioController : MonoBehaviour {
 
 	public BGAudio[] audioClips;
 
-	public int _index = 0;
+	public int _index = -1;
 
 	BGAudio _queuedClip = null;
 
@@ -45,8 +45,8 @@ public class BackgroundAudioController : MonoBehaviour {
 	public void PlayNextClip() {
 		if (_index < audioClips.Length) {
 			_cutoff = float.MaxValue;
-			if (audioClips [_index].earlyCutoff > 0) {
-				_cutoff = audioSource.clip.length - audioClips [_index].earlyCutoff;
+			if (audioClips [Mathf.Clamp(_index, 0, int.MaxValue)].earlyCutoff > 0) {
+				_cutoff = audioSource.clip.length - audioClips [Mathf.Clamp(_index, 0, int.MaxValue)].earlyCutoff;
 			}
 			_index++;
 			GetComponent<AudioSource> ().loop = false;
