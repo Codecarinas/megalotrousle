@@ -1,0 +1,822 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Gaster Talking
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: -69.3882}
+        outSlope: {x: 0, y: 0, z: -69.3882}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 0, y: 0, z: -11.5647}
+        inSlope: {x: 0, y: 0, z: -14.6168995}
+        outSlope: {x: 0, y: 0, z: -14.6168995}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 0, y: 0, z: -4.8722997}
+        inSlope: {x: 0, y: 0, z: 48.117203}
+        outSlope: {x: 0, y: 0, z: 48.117203}
+        tangentMode: 0
+      - time: 0.5833333
+        value: {x: 0, y: 0, z: 9.147699}
+        inSlope: {x: 0, y: 0, z: -26.732433}
+        outSlope: {x: 0, y: 0, z: -26.732433}
+        tangentMode: 0
+      - time: 0.66683334
+        value: {x: 0, y: 0, z: 0.0007}
+        inSlope: {x: 0, y: 0, z: -34.945137}
+        outSlope: {x: 0, y: 0, z: -34.945137}
+        tangentMode: 0
+      - time: 0.8335
+        value: {x: 0, y: 0, z: 6.6098}
+        inSlope: {x: 0, y: 0, z: -39.879917}
+        outSlope: {x: 0, y: 0, z: -39.879917}
+        tangentMode: 0
+      - time: 0.9166667
+        value: {x: 0, y: 0, z: -3.3214998}
+        inSlope: {x: 0, y: 0, z: -87.62161}
+        outSlope: {x: 0, y: 0, z: -87.62161}
+        tangentMode: 0
+      - time: 1.0833334
+        value: {x: 0, y: 0, z: -12.6263}
+        inSlope: {x: 0, y: 0, z: 7.3676777}
+        outSlope: {x: 0, y: 0, z: 7.3676777}
+        tangentMode: 0
+      - time: 1.1668333
+        value: {x: 0, y: 0, z: -6.7342}
+        inSlope: {x: 0, y: 0, z: 79.44932}
+        outSlope: {x: 0, y: 0, z: 79.44932}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 0, y: 0, z: 7.9735}
+        inSlope: {x: 0, y: 0, z: 88.33449}
+        outSlope: {x: 0, y: 0, z: 88.33449}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gaster Torso/Head/Gaster Jaw
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.3669}
+        inSlope: {x: 0, y: 0, z: 7.1727495}
+        outSlope: {x: 0, y: 0, z: 7.1727495}
+        tangentMode: 0
+      - time: 0.4
+        value: {x: 0, y: 0, z: 3.2359998}
+        inSlope: {x: 0, y: 0, z: -14.692625}
+        outSlope: {x: 0, y: 0, z: -14.692625}
+        tangentMode: 0
+      - time: 0.75
+        value: {x: 0, y: 0, z: -9.559299}
+        inSlope: {x: 0, y: 0, z: -10.085315}
+        outSlope: {x: 0, y: 0, z: -10.085315}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 16.38737}
+        outSlope: {x: 0, y: 0, z: 16.38737}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gaster Torso/Head
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.026, y: 0.294, z: 0}
+        inSlope: {x: -0.016874984, y: 0.19687504, z: 0}
+        outSlope: {x: -0.016874984, y: 0.19687504, z: 0}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: -0.028812498, y: 0.3268125, z: 0}
+        inSlope: {x: -0.015202146, y: -0.104437456, z: 0}
+        outSlope: {x: -0.015202146, y: -0.104437456, z: 0}
+        tangentMode: 0
+      - time: 0.25
+        value: {x: -0.02993994, y: 0.293, z: 0}
+        inSlope: {x: -0.01312501, y: 0.12712486, z: 0}
+        outSlope: {x: -0.01312501, y: 0.12712486, z: 0}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: -0.031, y: 0.348, z: 0}
+        inSlope: {x: -0.013180666, y: 0.41999984, z: 0}
+        outSlope: {x: -0.013180666, y: 0.41999984, z: 0}
+        tangentMode: 0
+      - time: 0.5
+        value: {x: -0.033273436, y: 0.378, z: 0}
+        inSlope: {x: -0.007719298, y: -0.09644557, z: 0}
+        outSlope: {x: -0.007719298, y: -0.09644557, z: 0}
+        tangentMode: 0
+      - time: 0.5833333
+        value: {x: -0.033423267, y: 0.34692574, z: 0}
+        inSlope: {x: 0.013611617, y: -0.4135456, z: 0}
+        outSlope: {x: 0.013611617, y: -0.4135456, z: 0}
+        tangentMode: 0
+      - time: 0.66683334
+        value: {x: -0.030999996, y: 0.30900002, z: 0}
+        inSlope: {x: 0.001635043, y: 0.06903714, z: 0}
+        outSlope: {x: 0.001635043, y: 0.06903714, z: 0}
+        tangentMode: 0
+      - time: 0.78333336
+        value: {x: -0.034, y: 0.378, z: 0}
+        inSlope: {x: 0.19925918, y: -0.63139474, z: 0}
+        outSlope: {x: 0.19925918, y: -0.63139474, z: 0}
+        tangentMode: 0
+      - time: 0.8335
+        value: {x: -0.0127158165, y: 0.28493762, z: 0}
+        inSlope: {x: 0.26475266, y: -0.9487087, z: 0}
+        outSlope: {x: 0.26475266, y: -0.9487087, z: 0}
+        tangentMode: 0
+      - time: 0.9166667
+        value: {x: -0.0039637014, y: 0.28141522, z: 0}
+        inSlope: {x: 0.0823407, y: -0.011687097, z: 0}
+        outSlope: {x: 0.0823407, y: -0.011687097, z: 0}
+        tangentMode: 0
+      - time: 1.0001667
+        value: {x: 0.001, y: 0.283, z: 0}
+        inSlope: {x: 0.0040151644, y: 0.32812655, z: 0}
+        outSlope: {x: 0.0040151644, y: 0.32812655, z: 0}
+        tangentMode: 0
+      - time: 1.0833334
+        value: {x: -0.0032760352, y: 0.33599997, z: 0}
+        inSlope: {x: -0.07366866, y: 0.101991296, z: 0}
+        outSlope: {x: -0.07366866, y: 0.101991296, z: 0}
+        tangentMode: 0
+      - time: 1.1668333
+        value: {x: -0.011285521, y: 0.29982018, z: 0}
+        inSlope: {x: -0.10575563, y: -0.41997325, z: 0}
+        outSlope: {x: -0.10575563, y: -0.41997325, z: 0}
+        tangentMode: 0
+      - time: 1.25
+        value: {x: -0.020898692, y: 0.266, z: 0}
+        inSlope: {x: -0.11840238, y: 0.13267219, z: 0}
+        outSlope: {x: -0.11840238, y: 0.13267219, z: 0}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: -0.030999996, y: 0.322, z: 0}
+        inSlope: {x: -0.12121558, y: 0.67199963, z: 0}
+        outSlope: {x: -0.12121558, y: 0.67199963, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gaster Torso/Head/Gaster Jaw
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 3574807125
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3574807125
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 111621782
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.3333334
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.026
+        inSlope: -0.016874984
+        outSlope: -0.016874984
+        tangentMode: 10
+      - time: 0.16666667
+        value: -0.028812498
+        inSlope: -0.015202146
+        outSlope: -0.015202146
+        tangentMode: 10
+      - time: 0.25
+        value: -0.02993994
+        inSlope: -0.01312501
+        outSlope: -0.01312501
+        tangentMode: 10
+      - time: 0.33333334
+        value: -0.031
+        inSlope: -0.013180666
+        outSlope: -0.013180666
+        tangentMode: 10
+      - time: 0.5
+        value: -0.033273436
+        inSlope: -0.007719298
+        outSlope: -0.007719298
+        tangentMode: 10
+      - time: 0.5833333
+        value: -0.033423267
+        inSlope: 0.013611617
+        outSlope: 0.013611617
+        tangentMode: 10
+      - time: 0.66683334
+        value: -0.030999996
+        inSlope: 0.001635043
+        outSlope: 0.001635043
+        tangentMode: 10
+      - time: 0.78333336
+        value: -0.034
+        inSlope: 0.19925918
+        outSlope: 0.19925918
+        tangentMode: 10
+      - time: 0.8335
+        value: -0.0127158165
+        inSlope: 0.26475266
+        outSlope: 0.26475266
+        tangentMode: 10
+      - time: 0.9166667
+        value: -0.0039637014
+        inSlope: 0.0823407
+        outSlope: 0.0823407
+        tangentMode: 10
+      - time: 1.0001667
+        value: 0.001
+        inSlope: 0.0040151644
+        outSlope: 0.0040151644
+        tangentMode: 10
+      - time: 1.0833334
+        value: -0.0032760352
+        inSlope: -0.07366866
+        outSlope: -0.07366866
+        tangentMode: 10
+      - time: 1.1668333
+        value: -0.011285521
+        inSlope: -0.10575563
+        outSlope: -0.10575563
+        tangentMode: 10
+      - time: 1.25
+        value: -0.020898692
+        inSlope: -0.11840238
+        outSlope: -0.11840238
+        tangentMode: 10
+      - time: 1.3333334
+        value: -0.030999996
+        inSlope: -0.12121558
+        outSlope: -0.12121558
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.294
+        inSlope: 0.19687504
+        outSlope: 0.19687504
+        tangentMode: 10
+      - time: 0.16666667
+        value: 0.3268125
+        inSlope: -0.104437456
+        outSlope: -0.104437456
+        tangentMode: 10
+      - time: 0.25
+        value: 0.293
+        inSlope: 0.12712486
+        outSlope: 0.12712486
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0.348
+        inSlope: 0.41999984
+        outSlope: 0.41999984
+        tangentMode: 10
+      - time: 0.5
+        value: 0.378
+        inSlope: -0.09644557
+        outSlope: -0.09644557
+        tangentMode: 10
+      - time: 0.5833333
+        value: 0.34692574
+        inSlope: -0.4135456
+        outSlope: -0.4135456
+        tangentMode: 10
+      - time: 0.66683334
+        value: 0.30900002
+        inSlope: 0.06903714
+        outSlope: 0.06903714
+        tangentMode: 10
+      - time: 0.78333336
+        value: 0.378
+        inSlope: -0.63139474
+        outSlope: -0.63139474
+        tangentMode: 10
+      - time: 0.8335
+        value: 0.28493762
+        inSlope: -0.9487087
+        outSlope: -0.9487087
+        tangentMode: 10
+      - time: 0.9166667
+        value: 0.28141522
+        inSlope: -0.011687097
+        outSlope: -0.011687097
+        tangentMode: 10
+      - time: 1.0001667
+        value: 0.283
+        inSlope: 0.32812655
+        outSlope: 0.32812655
+        tangentMode: 10
+      - time: 1.0833334
+        value: 0.33599997
+        inSlope: 0.101991296
+        outSlope: 0.101991296
+        tangentMode: 10
+      - time: 1.1668333
+        value: 0.29982018
+        inSlope: -0.41997325
+        outSlope: -0.41997325
+        tangentMode: 10
+      - time: 1.25
+        value: 0.266
+        inSlope: 0.13267219
+        outSlope: 0.13267219
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0.322
+        inSlope: 0.67199963
+        outSlope: 0.67199963
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.16666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.5833333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.66683334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.78333336
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.8335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.9166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.0001667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.0833334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1668333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.16666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.5833333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.66683334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.8335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.9166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.0833334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1668333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.16666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.5833333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.66683334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.8335
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.9166667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.0833334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1668333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -69.3882
+        outSlope: -69.3882
+        tangentMode: 10
+      - time: 0.16666667
+        value: -11.5647
+        inSlope: -14.6168995
+        outSlope: -14.6168995
+        tangentMode: 10
+      - time: 0.33333334
+        value: -4.8722997
+        inSlope: 48.117203
+        outSlope: 48.117203
+        tangentMode: 10
+      - time: 0.5833333
+        value: 9.147699
+        inSlope: -26.732433
+        outSlope: -26.732433
+        tangentMode: 10
+      - time: 0.66683334
+        value: 0.0007
+        inSlope: -34.945137
+        outSlope: -34.945137
+        tangentMode: 10
+      - time: 0.8335
+        value: 6.6098
+        inSlope: -39.879917
+        outSlope: -39.879917
+        tangentMode: 10
+      - time: 0.9166667
+        value: -3.3214998
+        inSlope: -87.62161
+        outSlope: -87.62161
+        tangentMode: 10
+      - time: 1.0833334
+        value: -12.6263
+        inSlope: 7.3676777
+        outSlope: 7.3676777
+        tangentMode: 10
+      - time: 1.1668333
+        value: -6.7342
+        inSlope: 79.44932
+        outSlope: 79.44932
+        tangentMode: 10
+      - time: 1.3333334
+        value: 7.9735
+        inSlope: 88.33449
+        outSlope: 88.33449
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.4
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.4
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.75
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.3669
+        inSlope: 7.1727495
+        outSlope: 7.1727495
+        tangentMode: 10
+      - time: 0.4
+        value: 3.2359998
+        inSlope: -14.692625
+        outSlope: -14.692625
+        tangentMode: 10
+      - time: 0.75
+        value: -9.559299
+        inSlope: -10.085315
+        outSlope: -10.085315
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 16.38737
+        outSlope: 16.38737
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Gaster Torso/Head/Gaster Jaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Gaster Torso/Head
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []

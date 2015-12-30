@@ -134,11 +134,11 @@ Material:
       data:
         first:
           name: _JitterX
-        second: 0.6203535
+        second: 0.8733988
       data:
         first:
           name: _JitterY
-        second: 0.10539222
+        second: 0.66096187
       data:
         first:
           name: _JitterThreshold

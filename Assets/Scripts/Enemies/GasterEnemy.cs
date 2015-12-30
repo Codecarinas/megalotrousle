@@ -12,7 +12,11 @@ public class GasterEnemy : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (GameStateController.Instance.battleState == GameStateController.BattleState.kEnemyTurnIntro) {
+			GetComponent<Animator> ().SetFloat ("Talking", 1);
+		} else {
+			GetComponent<Animator> ().SetFloat ("Talking", 0);
+		}
 	}
 
 	public override void CycleDefenseDialog() {

@@ -38,6 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Battlefield/Clip Mask
+    uniqueID: 3414668823
+    locked: 0
+  - name: Battlefield/Enemies
+    uniqueID: 2282203199
+    locked: 0
+  - name: Battlefield/Background
+    uniqueID: 2580655317
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Battlefield/UI
+    uniqueID: 3229333081
+    locked: 0
+  - name: Battlefield/Outer Edge
+    uniqueID: 4207615481
+    locked: 0
+  - name: Battlefield/Enemy Soul
+    uniqueID: 3802105235
+    locked: 0
+  - name: Battlefield/Player
+    uniqueID: 1777433985
     locked: 0

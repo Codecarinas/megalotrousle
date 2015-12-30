@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class BattleZoneManager : MonoBehaviour {
 	public Vector2 targetControl;
 	public float speed = 1;
+	public UnityEvent completionCallbacks = new UnityEvent ();
 
 	Vector2 _currentControl;
 
@@ -13,10 +15,17 @@ public class BattleZoneManager : MonoBehaviour {
 		targetControl = new Vector2 (-1, -1);
 	}
 
+	bool _invoke = false;
+
 	void Update() {
 		_currentControl = Vector2.Lerp (_currentControl, targetControl, Time.deltaTime * speed);
 		GetComponent<Animator> ().SetFloat ("X", _currentControl.x);
 		GetComponent<Animator> ().SetFloat ("Y", _currentControl.y);
+
+		if (Vector2.Distance (_currentControl, targetControl) < 0.00001f && _invoke) {
+			_invoke = false;
+			completionCallbacks.Invoke ();
+		}
 	}
 
 	public void AttackZone() {
@@ -25,6 +34,7 @@ public class BattleZoneManager : MonoBehaviour {
 
 		targetControl.x = 0;
 		targetControl.y = 1;
+		_invoke = true;
 	}
 
 	public void DialogBox() {
@@ -33,6 +43,7 @@ public class BattleZoneManager : MonoBehaviour {
 
 		targetControl.x = -1;
 		targetControl.y = -1;
+		_invoke = true;
 	}
 
 	public void DefenseZone() {
@@ -41,5 +52,6 @@ public class BattleZoneManager : MonoBehaviour {
 
 		targetControl.x = 1;
 		targetControl.y = -1;
+		_invoke = true;
 	}
 }
